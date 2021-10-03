@@ -1,0 +1,340 @@
+/* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-black: #232625;
+    --clr-offwhite: #F0F1F2;
+    --clr-orange: #ff7038;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    color: var(--clr-offwhite);
+    background-color: var(--clr-orange);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+h1, h2 {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ANIMATION */
+.animation {
+    overflow: hidden;
+}
+
+.anm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: inset 0 1em 6em rgba(196, 57, 15, 0.836);
+    border-bottom: 1px solid #fff;
+    z-index: -1;
+    animation: animate 2s ease-in-out forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) scale(0);  
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);  
+    }
+}
+.anm:nth-child(1) {
+    width: 1600px;
+    height: 1600px;
+    animation-delay: 0s;
+}
+.anm:nth-child(2) {
+    width: 1300px;
+    height: 1300px;
+    animation-delay: 0.5s;
+
+}
+.anm:nth-child(3) {
+    width: 1000px;
+    height: 1000px;
+    animation-delay: 1s;
+
+}
+.anm:nth-child(4) {
+    width: 700px;
+    height: 700px;
+    animation-delay: 1.5s;
+
+}
+.anm:nth-child(5) {
+    width: 350px;
+    height: 350px;
+    animation-delay: 2s;
+}
+
+/* START NAV */
+#navbar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-black);
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0 auto;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em;
+    color: var(--clr-offwhite);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    background-color: var(--clr-orange);
+}
+
+/* START WELCOME SECTION */
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+}
+
+.welcome-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 0 0 10px white;
+    transition: transform 0.6s;
+}
+
+.welcome-title:hover {
+    transform: scale(1.1);
+}
+
+.welcome-text {
+    transform: ;
+}
+
+/* START PROJECTS SECTION */
+#projects {
+    text-align: center;
+    padding: 25em 0 0 0;
+}
+
+.project-section-header {
+    font-size: 2.5rem;
+    margin: 2em;
+}
+
+.project-grid {
+    display: grid;
+    grid-gap: 6rem;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    text-decoration: none;
+    background: var(--clr-black);
+    box-shadow: 0px 0px 20px rgba(196, 57, 15, 0.87);
+    width: 85%;
+    justify-self: center;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
+}
+
+.project-img {
+    object-fit: cover;
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* START CONTACT SECTION */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 90vh;
+    padding: 0 1em;
+}
+
+.contact-header {
+    font-size: 0.9rem;
+}
+
+.contact_heading {
+    font-size: 2.5rem;
+    transition: transform 0.4s ease;
+}
+
+.contact_heading:hover,
+.contact_heading:active {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(211, 67, 0, 0.63);
+}
+
+#contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin: 2em auto 3em;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    text-decoration: none;
+    color: var(--clr-black);
+    font-size: 1.3rem;
+    margin: 1em;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover,
+.contact-details:active {
+    transform: translateY(5px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0;
+}
+
+.btn:hover,
+.btn:active {
+    color: var(--clr-offwhite);
+}
+
+footer {
+    border-top: 4px solid var(--clr-black);
+    padding: 1.5em;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 560px) {
+    #navbar {
+        justify-content: flex-end;
+    }
+    
+    .nav-list {
+        margin-right: 1em;
+    }
+
+    .welcome-title {
+        font-size: 5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+    }
+
+    .project-tile {
+        width: 95%;
+        max-width: 350px;
+        box-shadow: 0px 0px 5px var(--clr-black);
+    }
+
+    .project-title {
+        margin: 0;
+        padding: 0.5em 0;
+    }
+
+    .project-img {
+        width: 100%;
+        height: 80%;
+    }
+
+    #contact-links {
+        flex-direction: column;
+    }
+
+    .contact_heading {
+        font-size: 2.8rem;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .welcome-title {
+        font-size: 6rem;
+    }
+
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5rem;
+    }
+
+    .contact_heading {
+        font-size: 4rem;
+    }
+}
