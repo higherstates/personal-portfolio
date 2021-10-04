@@ -152,6 +152,7 @@ img {
     margin: 0;
     text-shadow: 0 0 10px white;
     transition: transform 0.6s;
+    cursor: default;
 }
 
 .welcome-title:hover {
@@ -230,7 +231,7 @@ img {
 .contact_heading:hover,
 .contact_heading:active {
     transform: scale(1.2);
-    text-shadow: 0 0 10px rgba(211, 67, 0, 0.63);
+    text-shadow: 0 0 8px rgba(211, 67, 0, 0.63);
 }
 
 #contact-links {
